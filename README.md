@@ -1,8 +1,9 @@
-# Chemistry Figures
+# Vector Chem
 
-A standalone, publication-grade educational vector diagram generator for chemistry and laboratory sciences. Built with **React 19**, **TypeScript**, **Tailwind CSS**, and **Vite**.
+A standalone, publication-grade STEM vector diagram studio for chemistry and laboratory sciences. Built with **React 19**, **TypeScript**, **Tailwind CSS**, and **Vite**.
 
-Reverse engineered from [ChemistryFigures.com](https://chemistryfigures.com/).
+- **Live URL**: [https://vector-chem.vercel.app](https://vector-chem.vercel.app)
+- **Suite Family**: [Vector Physics](https://vector-physics.vercel.app) · [Vector Math](https://vector-math.vercel.app)
 
 ---
 
