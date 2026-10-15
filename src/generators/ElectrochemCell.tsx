@@ -37,12 +37,13 @@ export const ElectrochemCell: React.FC<ElectrochemCellProps> = ({ state, onChang
 
   return (
     <div className="flex flex-col lg:flex-row items-start gap-8 w-full max-w-7xl mx-auto">
-      {/* Visual Canvas */}
-      <div className="flex-1 w-full flex flex-col items-center">
-        <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden p-6 flex flex-col items-center">
+      {/* Visual Canvas - Sticky Studio Viewport */}
+      <div className="flex-1 w-full flex flex-col items-center lg:sticky lg:top-24">
+        <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col items-center">
           <CanvasToolbar
             svgRef={svgRef}
             filename="galvanic-cell"
+            dimensions={{ width: 540, height: 380 }}
             onReset={() => onChange(defaultElectrochemCellState)}
           />
 
@@ -208,7 +209,7 @@ export const ElectrochemCell: React.FC<ElectrochemCellProps> = ({ state, onChang
                 textAnchor="middle"
                 fontSize="14"
                 fontWeight="bold"
-                fill="#2563eb"
+                fill="#1e3a8a"
               >
                 {state.voltage}
               </text>

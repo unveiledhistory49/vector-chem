@@ -56,12 +56,13 @@ export const HeatingCurve: React.FC<HeatingCurveProps> = ({ state, onChange }) =
 
   return (
     <div className="flex flex-col lg:flex-row items-start gap-8 w-full max-w-7xl mx-auto">
-      {/* Visual Canvas */}
-      <div className="flex-1 w-full flex flex-col items-center">
-        <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden p-6 flex flex-col items-center">
+      {/* Visual Canvas - Sticky Studio Viewport */}
+      <div className="flex-1 w-full flex flex-col items-center lg:sticky lg:top-24">
+        <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col items-center">
           <CanvasToolbar
             svgRef={svgRef}
             filename="heating-curve"
+            dimensions={{ width: 540, height: 380 }}
             onReset={() => onChange(defaultHeatingCurveState)}
           />
 
@@ -145,7 +146,7 @@ export const HeatingCurve: React.FC<HeatingCurveProps> = ({ state, onChange }) =
                     fontFamily="sans-serif"
                     fontWeight="bold"
                     textAnchor="end"
-                    fill="#2563eb"
+                    fill="#1e3a8a"
                   >
                     T_m ({state.tm}°C)
                   </text>
@@ -170,7 +171,7 @@ export const HeatingCurve: React.FC<HeatingCurveProps> = ({ state, onChange }) =
               <polyline
                 points={`${x0},${y0} ${x1},${y1} ${x2},${y2} ${x3},${y3} ${x4},${y4} ${x5},${y5}`}
                 fill="none"
-                stroke={state.color ? '#2563eb' : '#1e293b'}
+                stroke={state.color ? '#1e3a8a' : '#1e293b'}
                 strokeWidth="3.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -182,7 +183,7 @@ export const HeatingCurve: React.FC<HeatingCurveProps> = ({ state, onChange }) =
                   <text x={(x0 + x1) / 2 - 12} y={(y0 + y1) / 2 - 12}>
                     Solid
                   </text>
-                  <text x={(x1 + x2) / 2} y={y1 - 10} fill="#2563eb">
+                  <text x={(x1 + x2) / 2} y={y1 - 10} fill="#1e3a8a">
                     Melting (S+L)
                   </text>
                   <text x={(x2 + x3) / 2 - 14} y={(y2 + y3) / 2 - 14}>

@@ -84,12 +84,13 @@ export const BohrModel: React.FC<BohrModelProps> = ({ state, onChange }) => {
 
   return (
     <div className="flex flex-col lg:flex-row items-start gap-8 w-full max-w-7xl mx-auto">
-      {/* Visual Canvas */}
-      <div className="flex-1 w-full flex flex-col items-center">
-        <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden p-6 flex flex-col items-center">
+      {/* Visual Canvas - Sticky Studio Viewport */}
+      <div className="flex-1 w-full flex flex-col items-center lg:sticky lg:top-24">
+        <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col items-center">
           <CanvasToolbar
             svgRef={svgRef}
             filename={`bohr-${state.elementSymbol.toLowerCase()}`}
+            dimensions={{ width: 540, height: 400 }}
             onReset={() => onChange(defaultBohrModelState)}
           />
 
@@ -141,7 +142,7 @@ export const BohrModel: React.FC<BohrModelProps> = ({ state, onChange }) => {
                             cx={pt.x}
                             cy={pt.y}
                             r="5"
-                            fill={state.color ? '#2563eb' : '#1e293b'}
+                            fill={state.color ? '#1e3a8a' : '#1e293b'}
                             stroke="#ffffff"
                             strokeWidth="1.5"
                           />

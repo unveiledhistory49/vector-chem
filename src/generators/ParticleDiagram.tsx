@@ -30,7 +30,7 @@ export const ParticleDiagram: React.FC<ParticleDiagramProps> = ({ state, onChang
   // Render particles based on phase & composition
   const renderParticles = () => {
     const particles = [];
-    const colorA = state.color ? '#2563eb' : '#1e293b';
+    const colorA = state.color ? '#1e3a8a' : '#1e293b';
     const colorB = state.color ? '#ef4444' : '#64748b';
 
     if (state.phase === 'solid') {
@@ -175,12 +175,13 @@ export const ParticleDiagram: React.FC<ParticleDiagramProps> = ({ state, onChang
 
   return (
     <div className="flex flex-col lg:flex-row items-start gap-8 w-full max-w-7xl mx-auto">
-      {/* Visual Canvas */}
-      <div className="flex-1 w-full flex flex-col items-center">
-        <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden p-6 flex flex-col items-center">
+      {/* Visual Canvas - Sticky Studio Viewport */}
+      <div className="flex-1 w-full flex flex-col items-center lg:sticky lg:top-24">
+        <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col items-center">
           <CanvasToolbar
             svgRef={svgRef}
             filename={`particle-diagram-${state.phase}`}
+            dimensions={{ width: 540, height: 380 }}
             onReset={() => onChange(defaultParticleDiagramState)}
           />
 

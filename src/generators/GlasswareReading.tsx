@@ -59,12 +59,13 @@ export const GlasswareReading: React.FC<GlasswareReadingProps> = ({ state, onCha
 
   return (
     <div className="flex flex-col lg:flex-row items-start gap-8 w-full max-w-7xl mx-auto">
-      {/* Visual Canvas */}
-      <div className="flex-1 w-full flex flex-col items-center">
-        <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden p-6 flex flex-col items-center">
+      {/* Visual Canvas - Sticky Studio Viewport */}
+      <div className="flex-1 w-full flex flex-col items-center lg:sticky lg:top-24">
+        <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200/90 overflow-hidden flex flex-col items-center">
           <CanvasToolbar
             svgRef={svgRef}
             filename={`reading-${state.type}`}
+            dimensions={{ width: 540, height: 380 }}
             onReset={() => onChange(defaultGlasswareReadingState)}
           />
 
@@ -98,7 +99,7 @@ export const GlasswareReading: React.FC<GlasswareReadingProps> = ({ state, onCha
                 <path
                   d={`M ${cx - tubeWidth / 2} ${meniscusY - 4} Q ${cx} ${meniscusY + 6} ${cx + tubeWidth / 2} ${meniscusY - 4}`}
                   fill="none"
-                  stroke={state.color ? '#1d4ed8' : '#1e293b'}
+                  stroke={state.color ? '#1e3a8a' : '#1e293b'}
                   strokeWidth="2.5"
                 />
               )}
