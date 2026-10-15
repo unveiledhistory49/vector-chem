@@ -99,7 +99,7 @@ export const GlasswareReading: React.FC<GlasswareReadingProps> = ({ state, onCha
                 <path
                   d={`M ${cx - tubeWidth / 2} ${meniscusY - 4} Q ${cx} ${meniscusY + 6} ${cx + tubeWidth / 2} ${meniscusY - 4}`}
                   fill="none"
-                  stroke={state.color ? '#1e3a8a' : '#1e293b'}
+                  stroke={state.color ? '#1d4ed8' : '#1e293b'}
                   strokeWidth="2.5"
                 />
               )}

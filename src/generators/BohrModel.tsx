@@ -142,7 +142,7 @@ export const BohrModel: React.FC<BohrModelProps> = ({ state, onChange }) => {
                             cx={pt.x}
                             cy={pt.y}
                             r="5"
-                            fill={state.color ? '#1e3a8a' : '#1e293b'}
+                            fill={state.color ? '#2563eb' : '#1e293b'}
                             stroke="#ffffff"
                             strokeWidth="1.5"
                           />

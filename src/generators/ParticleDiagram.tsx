@@ -30,7 +30,7 @@ export const ParticleDiagram: React.FC<ParticleDiagramProps> = ({ state, onChang
   // Render particles based on phase & composition
   const renderParticles = () => {
     const particles = [];
-    const colorA = state.color ? '#1e3a8a' : '#1e293b';
+    const colorA = state.color ? '#2563eb' : '#1e293b';
     const colorB = state.color ? '#ef4444' : '#64748b';
 
     if (state.phase === 'solid') {

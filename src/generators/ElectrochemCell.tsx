@@ -209,7 +209,7 @@ export const ElectrochemCell: React.FC<ElectrochemCellProps> = ({ state, onChang
                 textAnchor="middle"
                 fontSize="14"
                 fontWeight="bold"
-                fill="#1e3a8a"
+                fill="#2563eb"
               >
                 {state.voltage}
               </text>

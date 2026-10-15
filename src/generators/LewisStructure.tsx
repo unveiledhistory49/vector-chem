@@ -242,7 +242,7 @@ export const LewisStructure: React.FC<LewisStructureProps> = ({ state, onChange 
                       fontSize="28"
                       fontFamily="sans-serif"
                       fontWeight="bold"
-                      fill={state.color ? '#1e3a8a' : '#000000'}
+                      fill={state.color ? '#2563eb' : '#000000'}
                     >
                       {b.atom}
                     </text>

@@ -217,17 +217,17 @@ export const TitrationCurve: React.FC<TitrationCurveProps> = ({ state, onChange 
 
               {/* Half-Equivalence Point (pH = pKa) */}
               {state.showHalfEqPoint && state.titrationType === 'weak-strong' && (
-                <g stroke="#1e3a8a" strokeWidth="1.5" strokeDasharray="3,3">
+                <g stroke="#2563eb" strokeWidth="1.5" strokeDasharray="3,3">
                   <line x1={originX} y1={halfPxY} x2={halfPxX} y2={halfPxY} />
                   <line x1={halfPxX} y1={originY} x2={halfPxX} y2={halfPxY} />
-                  <circle cx={halfPxX} cy={halfPxY} r="4.5" fill="#1e3a8a" stroke="#ffffff" strokeWidth="1.5" />
+                  <circle cx={halfPxX} cy={halfPxY} r="4.5" fill="#2563eb" stroke="#ffffff" strokeWidth="1.5" />
                   <text
                     x={halfPxX + 10}
                     y={halfPxY + 16}
                     fontSize="12"
                     fontFamily="sans-serif"
                     fontWeight="bold"
-                    fill="#1e3a8a"
+                    fill="#2563eb"
                   >
                     Half-Eq: pH = pKₐ ({halfEqPh})
                   </text>
@@ -238,7 +238,7 @@ export const TitrationCurve: React.FC<TitrationCurveProps> = ({ state, onChange 
               <path
                 d={pathD}
                 fill="none"
-                stroke={state.color ? '#1e3a8a' : '#1e293b'}
+                stroke={state.color ? '#2563eb' : '#1e293b'}
                 strokeWidth="3"
                 strokeLinecap="round"
               />

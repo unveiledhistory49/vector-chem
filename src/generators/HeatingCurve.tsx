@@ -146,7 +146,7 @@ export const HeatingCurve: React.FC<HeatingCurveProps> = ({ state, onChange }) =
                     fontFamily="sans-serif"
                     fontWeight="bold"
                     textAnchor="end"
-                    fill="#1e3a8a"
+                    fill="#2563eb"
                   >
                     T_m ({state.tm}°C)
                   </text>
@@ -171,7 +171,7 @@ export const HeatingCurve: React.FC<HeatingCurveProps> = ({ state, onChange }) =
               <polyline
                 points={`${x0},${y0} ${x1},${y1} ${x2},${y2} ${x3},${y3} ${x4},${y4} ${x5},${y5}`}
                 fill="none"
-                stroke={state.color ? '#1e3a8a' : '#1e293b'}
+                stroke={state.color ? '#2563eb' : '#1e293b'}
                 strokeWidth="3.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -183,7 +183,7 @@ export const HeatingCurve: React.FC<HeatingCurveProps> = ({ state, onChange }) =
                   <text x={(x0 + x1) / 2 - 12} y={(y0 + y1) / 2 - 12}>
                     Solid
                   </text>
-                  <text x={(x1 + x2) / 2} y={y1 - 10} fill="#1e3a8a">
+                  <text x={(x1 + x2) / 2} y={y1 - 10} fill="#2563eb">
                     Melting (S+L)
                   </text>
                   <text x={(x2 + x3) / 2 - 14} y={(y2 + y3) / 2 - 14}>
